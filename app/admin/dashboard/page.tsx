@@ -27,17 +27,17 @@ export default function AdminDashboard() {
     }
   }, [router, user])
 
-  useEffect(() => {
-    const fetchCards = async () => {
-      try {
-        const response = await fetch("http://localhost:5000/api/pdf/get-pdfs")
-        console.log("response data ", response.file_data);
-        const data = await response.json()
-        setCards(data)
-      } catch (error) {
-        console.error("Failed to fetch cards:", error)
-      }
-    }
+  // useEffect(() => {
+  //   const fetchCards = async () => {
+  //     try {
+  //       const response = await fetch("http://localhost:5000/api/pdf/get-pdfs")
+  //       console.log("response data ", response.file_data);
+  //       const data = await response.json()
+  //       setCards(data)
+  //     } catch (error) {
+  //       console.error("Failed to fetch cards:", error)
+  //     }
+  //   }
 
     if (user) {
       fetchCards()
