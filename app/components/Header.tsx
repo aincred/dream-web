@@ -29,7 +29,7 @@ const Header = () => {
     { name: "Home", href: "/" },
     { name: "Contact", href: "/contact" },
     { name: "Service", href: "/services" },
-    //{ name: "Certificate", href: "/certificate" },
+    // { name: "Certificate", href: "/certificate" },
     { name: "Company", href: "/company" },
     { name: "Career", href: "/career" },
   ]
@@ -98,7 +98,7 @@ const Header = () => {
               </Link>
             ))}
             <ThemeToggle />
-            {/* {user ? (
+            {user ? (
               <button
                 onClick={handleLogout}
                 className="text-red-600 hover:text-red-700 dark:text-red-400 dark:hover:text-red-500"
@@ -112,7 +112,7 @@ const Header = () => {
               >
                 Admin Login
               </Link>
-            )} */}
+            )}
           </div>
 
           {/* Mobile menu button */}
