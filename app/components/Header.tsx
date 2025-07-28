@@ -110,7 +110,7 @@ const Header = () => {
                 href="/admin"
                 className="text-black dark:text-white hover:text-red-600 dark:hover:text-red-400"
               >
-                Admin Login
+                
               </Link>
             )}
           </div>
