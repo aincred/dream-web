@@ -228,8 +228,8 @@ const serviceCategories = [
 ]
 
 const fadeInUp = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+  // hidden: { opacity: 0, y: 5 },
+  // visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
 }
 
 export default function Services() {
@@ -245,7 +245,7 @@ export default function Services() {
           ref={ref}
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
-          variants={fadeInUp}
+          // variants={fadeInUp}
           className="text-center mb-12"
         >
           <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Our Services</h1>

@@ -158,7 +158,7 @@ const Header = () => {
                 className="block py-2 px-4 text-black dark:text-white hover:text-red-600 dark:hover:text-red-400 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Admin Login
+                
               </Link>
             )}
           </motion.div>

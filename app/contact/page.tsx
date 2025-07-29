@@ -132,7 +132,7 @@ export default function Contact() {
                 sitekey="6Lf6s9QqAAAAAHJlLKzLBUlGx-Nb9Rp_FoNinLMo" 
                 onChange={(token) => setCaptchaToken(token)} 
               />
-              <Button type="submit" className="w-full">
+              <Button  type="submit" className="w-full  bg-red-600">
                 Send Message
               </Button>
             </form>
