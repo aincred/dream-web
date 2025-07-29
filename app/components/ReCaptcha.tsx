@@ -22,7 +22,7 @@ const ReCaptcha: React.FC<ReCaptchaProps> = ({ sitekey, onChange }) => {
   useEffect(() => {
     // Load the reCAPTCHA script only once
     const script = document.createElement("script")
-    script.src = `https://www.google.com/recaptcha/api.js?render=explicit`
+    script.src = `https://www.google.com/recaptcha/api.js?render=reCAPTCHA_site_key`
     script.async = true
     script.defer = true
     script.onload = () => setIsLoaded(true) // Set the flag to true when the script has loaded
