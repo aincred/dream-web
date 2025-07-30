@@ -64,16 +64,14 @@ export default function AddCertificate() {
     
     try {
       const token = localStorage.getItem("token")
-      const storedUser = localStorage.getItem("user")
       
-      if (!token || !storedUser) {
+      if (!token) {
         toast.error("Authentication required. Please login again.")
         router.push("/admin")
         return
       }
 
       const submitData = new FormData()
-      
       submitData.append("name", formData.name)
       submitData.append("issued", formData.issuedDate)
       submitData.append("validity", formData.validityDate)
@@ -81,13 +79,6 @@ export default function AddCertificate() {
       if (formData.file) {
         submitData.append("pdfFile", formData.file)
       }
-
-      console.log("Form Data:", {
-        name: formData.name,
-        issued: formData.issuedDate,
-        validity: formData.validityDate,
-        file: formData.file?.name
-      })
 
       const response = await axios.post(
         "http://localhost:5000/api/pdf/upload",
@@ -100,7 +91,7 @@ export default function AddCertificate() {
         }
       )
 
-      if (response.data.success) {
+      if (response.status === 200) {
         toast.success("Certificate uploaded successfully!")
         setFormData({
           name: "",
@@ -114,23 +105,7 @@ export default function AddCertificate() {
       }
     } catch (error: any) {
       console.error("Error uploading file:", error)
-      
-      if (error.response?.status === 400) {
-        toast.error(error.response.data || "Invalid form data")
-      } else if (error.response?.status === 403) {
-        toast.error("Access denied. Please ensure you have admin privileges.")
-        localStorage.removeItem("token")
-        localStorage.removeItem("user")
-        router.push("/admin")
-      } else if (error.response?.status === 401) {
-        toast.error("Session expired. Please login again.")
-        localStorage.removeItem("token")
-        localStorage.removeItem("user")
-        router.push("/admin")
-      } else {
-        const errorMessage = error.response?.data || "Error uploading certificate"
-        toast.error(typeof errorMessage === 'string' ? errorMessage : "Error uploading certificate")
-      }
+      toast.error(error.response?.data || "Error uploading certificate")
     } finally {
       setIsSubmitting(false)
     }
@@ -222,5 +197,5 @@ export default function AddCertificate() {
     </div>
   )
 }
-
+               
 
