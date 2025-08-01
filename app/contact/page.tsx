@@ -151,7 +151,7 @@ export default function Contact() {
               </div>
               <div className="flex items-center">
                 <Mail className="w-6 h-6 text-[#e53a20] mr-4" />
-                <p className="text-gray-600 dark:text-gray-300">support@dwinfotech.in</p>
+                <p className="text-gray-600 dark:text-gray-300">support[at]dwinfotech[dot]in</p>
               </div>
             </div>
 

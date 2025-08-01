@@ -96,7 +96,7 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
             <p className="text-gray-600 mb-2">277 K-5, Kanke, Ranchi, Jharkhand, India 834008</p>
-            <p className="text-gray-600 mb-2">651 310 0515</p>
+            <p className="text-gray-600 mb-2">+(651)310 0515</p>
             <p className="text-gray-600 mb-4">support[at]dwinfotech[dot]in</p>
             <div className="flex space-x-4">
               <a href="https://www.facebook.com/people/Dreamworks-Infotech-Pvt-Ltd/100054681223435/#" className="text-gray-600 hover:text-[#e53a20]">
