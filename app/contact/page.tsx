@@ -129,7 +129,7 @@ export default function Contact() {
                 />
               </div>
               <ReCaptcha 
-                sitekey="6Lf6s9QqAAAAAHJlLKzLBUlGx-Nb9Rp_FoNinLMo" 
+                sitekey="6LcygpYrAAAAAAnBQpYiwnV3CnmL-ft7oxEZ608u" 
                 onChange={(token) => setCaptchaToken(token)} 
               />
               <Button type="submit" className="w-full bg-red-500">

@@ -372,7 +372,7 @@ export default function CareerPage() {
                 </div>
                 {errors.resume && <p className="mt-1 text-sm text-red-500">{errors.resume.message}</p>}
               </div>
-              <ReCaptcha sitekey="6Lf6s9QqAAAAAHJlLKzLBUlGx-Nb9Rp_FoNinLMo" onChange={(token) => setCaptchaToken(token)} />
+              <ReCaptcha sitekey="6LcygpYrAAAAAAnBQpYiwnV3CnmL-ft7oxEZ608u" onChange={(token) => setCaptchaToken(token)} />
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                 <Button
                   type="submit"
