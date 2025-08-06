@@ -31,7 +31,7 @@ export default function CertificateVerification() {
     }
 
     try {
-      const response = await axios.get(`http://localhost:5000/api/pdf/search-pdf?name=${certificateNumber}`)
+      const response = await axios.get(`/api/certificate/search?number=${certificateNumber}`)
       console.log(response)
       const pdfData = response.data[0]
       if (pdfData?.file_data) {

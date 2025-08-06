@@ -1,5 +1,3 @@
-//admin login page
-
 "use client"
 
 import type React from "react"
